@@ -1,0 +1,180 @@
+#DOMMIES Y GENERICOS
+cabecera=Capçalera
+
+#CABECERA
+gestioUsuaris=Gestió d'usuaris
+tancarSessio=Tancar sessió
+
+#MENUS DE LA APLICACION
+menuConsultes=Consultes
+submenuConsultes1=Consultes derivacions
+submenuConsultes2=Pendent de rebre confirmació de creació
+submenuConsultes3=Creada
+submenuConsultes4=Pendent de rebre confirmació de canvi d'estat a cancel·lada
+submenuConsultes5=Pendent de rebre confirmació de canvi d'estat a programada
+submenuConsultes6=Programada
+submenuConsultes7=Reprogramada
+submenuConsultes8=Cancel·lada
+submenuConsultes9=Amb resultats
+submenuConsultes10=Pendent de rebre recepció de mostres
+submenuConsultes11=Recepció de mostres
+menuInformes=Informes
+submenuInformes1=ICR Tiemps de resposta
+submenuInformes2=Traçabilitat derivacions
+menuFavoritos=Preferits
+submenuFavoritos1=Pendent de rebre confirmació de creació
+menulateral=Menú lateral
+
+#PANTALLA DE CONSULTAS
+pagconsultas=Pàgina de consultes
+fechaInicio=Data sol·licitud desde
+fechaFin=Data sol·licitud fins a
+fechaSolicitud=Data Sol·licitud
+uporigen=UP Origen
+updesti=UP Destí
+idsolicitud=ID Sol·licitud
+numauth=Número autorització
+ipp=IPP
+cip=CIP
+codiprestsol=Codi prestació sol·licitada
+servdesti=Servei de destí
+estados=Estats
+estadoDerivacion=Estat Derivació
+enviar=Enviar
+guardar=Desar
+cabeceraConsultas=Consultes Derivacions
+cancelar=Cancelar
+eliminar=Eliminar
+noResults=No hi han resultats
+
+#PANTALLA DE INFORMES
+informes.cabeceraInformes=ICR Temps de resposta
+informes.filtres=Filtres
+informes.respostaDesti=Temps de resposta per destí
+informes.respostaFiltrat=Temps de resposta per destí filtrat per origen
+informes.fechaPeticion=Peticions creades entre
+informes.i=i
+informes.prestacion=Prestació
+informes.upOrigen=UP Origen
+informes.filtrar=Filtrar
+informes.guardarFav=Guardar preferits
+informes.graf.upDesti=UP Destí
+informes.graf.temps=Temps (dies)
+informes.graf.series=Sèries
+
+#PANTALLA TRAZABILIDAD
+trazabilidad.titol=Traçabilitat derivacions
+trazabilidad.filtrar=Filtrar
+trazabilidad.guardar=Guardar Preferits
+
+#PANTALLA DETALL
+detall.titol=Detall de la derivació
+detall.numAutoritzacio=Número autorització:
+detall.idSolicitud=ID Sol·licitud:
+detall.prioritatSolicitud=Prioritat sol·licitud:
+detall.estatDerivacio=Estat derivació:
+detall.codiSap=Codi SAP:
+detall.dadesDerivacio=DADES DERIVACIO
+detall.dataSolicitud=Data sol·licitud:
+detall.dataValidacio=Data validació:
+detall.dataCitacio=Data citació:
+detall.dataOtencioResultats=Data obtenció resultats:
+detall.dataRefus=Data del refús:
+detall.dataEsperadaRealitzacio=Data esperada de realització:
+detall.dataRealitzacio=Data de realització:
+detall.dataAnulacio=Data d'anul·lació:
+detall.centreOrigen=CENTRE ORIGEN
+detall.upOrigen=Up Origen:
+detall.descripcioUpOrigen=Descripció UP Origen:
+detall.sistemaOrigen=Sistema origen:
+detall.metgePeticionari=METGE PETICIONARI
+detall.nom=Nom:
+detall.primerCognom=Primer cognom:
+detall.segonCognom=Segon cognom:
+detall.numColegiat=Núm. Col·legiat:
+detall.centreDesti=CENTRE DESTI
+detall.upDesti=UP Destí:
+detall.descripcioUpDesti=Descripció UP Destí:
+detall.serveiDesti=Servei destí:
+detall.especialitatDesti=Especialitat destí:
+detall.descripcioEspecialitatDesti=Descripció especialitat destí:
+detall.sistemaDesti=Sistema destí:
+detall.dadesPrestacio=DADES PRESTACIO
+detall.idProcesPrestacio=ID procés prestació:
+detall.codiPrestacioRealitzada=Codi prestació realitzada:
+detall.informeResultat=Informe resultat:
+detall.codiPrestacioSolicitada=Codi prestació sol·licitada:
+detall.codiPrestacioRealitzadaAntic=Codi prestació realitzada antic:
+detall.nomFitxerSCDPI=Nom fitxer SCDPI:
+detall.codiPrestacioSolicitadaAntic=Codi prestació sol·licitada antic:
+detall.motiuProgramacio=Motiu programació prestació:
+detall.grupPrestacio=Grup prestació:
+detall.descripcioPrestacio=Descripció prestació:
+detall.motiuNoRealitzacio=Motiu no realització prestació:
+detall.dadesPacient=DADES PACIENT
+detall.cip=CIP:
+detall.dataNaixement=Data naixement:
+detall.dni=DNI:
+detall.adreca=Adreça:
+detall.poblacio=Població:
+detall.ipp=IPP:
+detall.dadesEconomiques=DADES ECONÒMIQUES
+detall.numExpedient=Núm. expedient:
+detall.dataFactura=Data factura:
+detall.preu=Preu:
+detall.numFactura=Núm. factura:
+detall.periodeFactura=Període factura:
+
+
+
+#PANTALLES GESTIO USUARI
+id=ID
+nom=Nom
+primerCognom=Primer Cognom
+segonCognom=Segon Cognom
+alta=Alta
+modificar=Modificar
+canviarContrasenya=Canviar Contrasenya
+
+#PANTALLA DE MODIFICACION DE USUARIOS
+gestUsuarios.mod.cabecera=Gestió d'Usuaris - Modificar usuari
+gestUsuarios.mod.canvipass=Gestió d'Usuaris - Canvi Contrasenya
+gestUsuarios.mod.id=ID
+gestUsuarios.mod.nom=Nom
+gestUsuarios.mod.primer.ape=Primer Cognom
+gestUsuarios.mod.segon.ape=Segon Cognom
+gestUsuarios.mod.email=Email
+gestUsuarios.mod.rol=Rol
+gestUsuarios.mod.pass=Contrasenya
+gestUsuarios.mod.pass.conf=Confirmar contrasenya
+gestUsuarios.mod.ep=EP
+gestUsuarios.mod.up=UP
+gestUsuarios.mod.coc=CoC
+gestUsuarios.mod.guardar=Guardar
+gestUsuarios.mod.cancelar=Cancelar
+gestUsuarios.mod.habilitar=Inactiu
+#alt
+gestUsuarios.mod.nom.alt=Nom
+gestUsuarios.mod.primer.ape.alt=Primer Cognom
+gestUsuarios.mod.segon.ape.alt=Segon Cognom
+gestUsuarios.mod.email.alt=email
+gestUsuarios.mod.rol.alt=Rol
+gestUsuarios.mod.pass.alt=Contrasenya
+gestUsuarios.mod.pass.conf.alt=Confirmar contrasenya
+gestUsuarios.mod.ep.alt=EP
+gestUsuarios.mod.up.alt=UP
+gestUsuarios.mod.coc.alt=CoC
+gestUsuarios.mod.habilitar.alt=Inactiu
+#placeholder
+gestUsuarios.mod.id.placeholder=ID
+gestUsuarios.mod.nom.placeholder=Nom
+gestUsuarios.mod.primer.ape.placeholder=Primer Cognom
+gestUsuarios.mod.segon.ape.placeholder=Segon Cognom
+gestUsuarios.mod.email.placeholder=email
+gestUsuarios.mod.rol.placeholder=Rol
+gestUsuarios.mod.pass.placeholder=Contrasenya
+gestUsuarios.mod.pass.conf.placeholder=Confirmar contrasenya
+gestUsuarios.mod.ep.placeholder=EP
+gestUsuarios.mod.up.placeholder=UP
+gestUsuarios.mod.coc.placeholder=coc
+gestUsuarios.mod.habilitar.placeholder=Inactiu

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="cmdvPF">
+
+    <Resource name="jndiName" 
+			auth="Container"
+            type="javax.sql.DataSource" 
+            driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost/cmdvPF"
+            username="root" 
+            password="" 
+            maxActive="20" 
+            maxIdle="10"
+            maxWait="10000"
+            testOnBorrow="true"
+            validationQuery="select 1 from dual"/>
+
+<!-- 	<Resource name="jdbc/pipa-pre"  -->
+<!-- 			auth="Container" -->
+<!--             type="javax.sql.DataSource"  -->
+<!--             driverClassName="oracle.jdbc.OracleDriver" -->
+<!--             url="jdbc:oracle:thin:@10.57.143.119:1523:MBT" -->
+<!--             username="broker_pre"  -->
+<!--             password="broker01"  -->
+<!--             maxActive="20"  -->
+<!--             maxIdle="10" -->
+<!--             maxWait="10000" -->
+<!--             testOnBorrow="true" -->
+<!--             validationQuery="select 1 from dual"/> -->
+            
+</Context>

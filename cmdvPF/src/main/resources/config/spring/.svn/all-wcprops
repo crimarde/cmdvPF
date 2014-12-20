@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/pipa/!svn/ver/839/trunk/MonitorFuncional/monitor-funcional-web/src/main/resources/config/spring
+END
+persistence-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/pipa/!svn/ver/986/trunk/MonitorFuncional/monitor-funcional-web/src/main/resources/config/spring/persistence-context.xml
+END

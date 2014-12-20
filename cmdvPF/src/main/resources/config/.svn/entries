@@ -1,0 +1,34 @@
+10
+
+dir
+894
+http://ctti2/svn/pipa/trunk/MonitorFuncional/monitor-funcional-web/src/main/resources/config
+http://ctti2/svn/pipa
+
+
+
+2014-11-18T13:11:07.669391Z
+881
+jsalvans
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f0b4e4ce-40a9-11e3-89c1-9bdb6eadacac
+
+i18n
+dir
+
+spring
+dir
+
