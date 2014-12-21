@@ -6,16 +6,70 @@
   	
   	<display-name>cmdvPF</display-name>
  	
+ 	<context-param>
+		<!-- Define la localizacion del archivo de configuracion de Spring. -->
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+		<!--	WEB-INF/spring-security.xml  -->
+			WEB-INF/applicationContext.xml
+		</param-value>
+	</context-param>
+	
+	<context-param> 
+		<param-name>javax.faces.DEFAULT_SUFFIX</param-name> 
+		<param-value>.xhtml</param-value> 
+	</context-param>
+	
+	<context-param>
+		<param-name>primefaces.THEME</param-name>
+		<param-value>cupertino</param-value>
+	</context-param>
+	<!-- For Prettyfaces, so that it doesn't scan all packages -->
+	<context-param>
+		<param-name>com.ocpsoft.pretty.BASE_PACKAGES</param-name>
+		<!-- Poner el paquete donde estarán los Controladores -->
+		<param-value>cat.gencat.ics.intg.tool.managedbeans</param-value>
+	</context-param>
+ 	
   	<!-- Change to "Production" when you are ready to deploy -->
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
 		<param-value>Development</param-value>
 	</context-param>
- 
-	<!-- Welcome page -->
-  	<welcome-file-list>
-    	<welcome-file>index.jsp</welcome-file>
-  	</welcome-file-list>
+	
+	<!-- Spring security -->
+	<!--  
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>Pretty Filter</filter-name>
+		<filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class>    -->
+		<!-- async-supported>true</async-supported  CERRAR EL COMENTARIO 
+	</filter>
+	-->
+	<filter-mapping>
+		<filter-name>Pretty Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<!-- dispatcher>ASYNC</dispatcher -->
+	</filter-mapping>
+	
+	<!-- Add Support for Spring -->
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
  
 	<!-- JSF mapping -->
 	<servlet>
@@ -23,12 +77,13 @@
 		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	
+	<!-- Welcome page -->
+  	<welcome-file-list>
+    	<welcome-file>index.jsp</welcome-file>
+  	</welcome-file-list>
  
 	<!-- Map these files with JSF -->
-	<servlet-mapping>
-		<servlet-name>Faces Servlet</servlet-name>
-		<url-pattern>/faces/*</url-pattern>
-	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.jsf</url-pattern>
@@ -41,5 +96,13 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
+	
+	<session-config>
+		<session-timeout>20</session-timeout>
+	</session-config>
+	<error-page>
+	    <error-code>404</error-code>
+	    <location>/error</location>
+	</error-page>
 	
 </web-app>

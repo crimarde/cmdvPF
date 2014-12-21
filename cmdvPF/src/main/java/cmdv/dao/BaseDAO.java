@@ -1,8 +1,6 @@
 package cmdv.dao;
 
-import java.io.Serializable;
-
-public interface BaseDAO <T, K extends Serializable> {
+public interface BaseDAO <T, K> {
 
 	public T create(T entity);
 

@@ -10,7 +10,7 @@
 		<!-- Define la localizacion del archivo de configuracion de Spring. -->
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			WEB-INF/spring-security.xml
+		<!--	WEB-INF/spring-security.xml  -->
 			WEB-INF/applicationContext.xml
 		</param-value>
 	</context-param>
@@ -38,6 +38,7 @@
 	</context-param>
 	
 	<!-- Spring security -->
+	<!--  
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
@@ -49,9 +50,10 @@
 	
 	<filter>
 		<filter-name>Pretty Filter</filter-name>
-		<filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class>
-		<!-- async-supported>true</async-supported -->
+		<filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class>    -->
+		<!-- async-supported>true</async-supported  CERRAR EL COMENTARIO 
 	</filter>
+	-->
 	<filter-mapping>
 		<filter-name>Pretty Filter</filter-name>
 		<url-pattern>/*</url-pattern>

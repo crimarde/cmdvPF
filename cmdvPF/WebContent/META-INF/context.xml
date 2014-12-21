@@ -9,7 +9,7 @@
 		</property>
 	</bean>
 
-    <Resource name="${jdbc.name}" 
+    <Resource name="jndiName" 
 			auth="Container"
             type="javax.sql.DataSource" 
             driverClassName="${jdbc.driverClassName}"

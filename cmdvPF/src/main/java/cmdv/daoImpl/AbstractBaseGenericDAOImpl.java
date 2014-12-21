@@ -11,16 +11,16 @@ import org.hibernate.Transaction;
 
 import cmdv.dao.BaseDAO;
 
-public abstract class AbstractBaseGenericDAOImpl<T, K extends Serializable> implements BaseDAO<T, K> {
+public abstract class AbstractBaseGenericDAOImpl<T, K> implements BaseDAO<T, K> {
 	
-	@Inject
+	//@Inject
 	EntityManagerFactory emf;
 
 	EntityManager em;
 	
 	public AbstractBaseGenericDAOImpl() {
 		super();
-		em = emf.createEntityManager();
+		//em = emf.createEntityManager();
 	}
 	
 	@Override

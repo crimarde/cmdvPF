@@ -12,7 +12,7 @@ import cmdv.domain.User;
 @Transactional
 @Repository("userDao")
 public class UserDAOImpl extends AbstractBaseGenericDAOImpl<User, Long> implements UserDAO {
-
+	
 	@Override
 	public User findById(Long id) {
 		User coc = (User) ((Session) em.getDelegate())		//em.getDelegate obtine la sesión de hibernate (para los criteria)

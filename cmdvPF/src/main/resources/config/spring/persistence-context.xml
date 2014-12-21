@@ -15,17 +15,25 @@
 	    destroy-method="close" p:driverClassName="org.h2.Driver"
 	    p:url="jdbc:h2:mem:gallery;DB_CLOSE_DELAY=-1" p:username="sa"
 	    p:password="" />
-	-->
-	
+	    
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
         p:driverClassName="com.mysql.jdbc.Driver" p:url="jdbc:mysql://localhost/cmdvPF"
         p:username="root" p:password="" p:initialSize="5" p:maxActive="10">
     </bean>
- 
+	-->
+	
+	<!-- Referenciando un datsource declarado en el context -->
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:/comp/env/jndiName" />
+	</bean>
+	
+	<!-- Declarando un EntityManager (Se encarga de crear y persistir los objetos, equivalente SessionFactory de hibernate) -->
     <bean
         class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
         id="entityManagerFactory">
+        <property name="persistenceUnitName" value="UnidadPersonas" />
         <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="cmdv.*" />
     </bean>
  
     <context:component-scan base-package="cmdv.*">
@@ -33,14 +41,15 @@
             expression="org.springframework.stereotype.Repository" />
     </context:component-scan>
 
+	<!-- Declarando un TransactionManager (se encarga de las transacciones contra la base de datos) -->
   	<bean class="org.springframework.orm.jpa.JpaTransactionManager"
         id="transactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
     </bean>
+
+	<!-- Define que las transacciones estarán anotadas -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
  
- 	<!-- Define que las transacciones estarán anotadas -->
-    <tx:annotation-driven mode="aspectj"
-        transaction-manager="transactionManager" />
  
     <context:spring-configured />
     <context:annotation-config />
