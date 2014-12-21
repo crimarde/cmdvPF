@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config 
+	version="2.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+    
+     
+    <!-- Integracion JSF y Spring -->
+    <application>
+    	<!-- Bean que hace que sea spring el que haga las inyecciones -->
+        <el-resolver>
+            org.springframework.web.jsf.el.SpringBeanFacesELResolver
+        </el-resolver>
+        
+        <!-- Internacionalización -->
+		<locale-config>
+			<default-locale>ca_ES</default-locale>
+		</locale-config>
+		<resource-bundle>
+           <base-name>config.i18n.applicationResources</base-name>
+           <var>msg</var>
+       	</resource-bundle>
+       	<message-bundle>
+       		config.i18n.applicationResources
+       	</message-bundle>
+   	</application>
+    
+    
+    <!-- configuration of navigation rules -->   
+    <navigation-rule>
+        <from-view-id>/pages/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/pages/success.xhtml</to-view-id>
+        </navigation-case>
+         <navigation-case>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/pages/error.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+     
+</faces-config>

@@ -2,14 +2,19 @@ package cmdv.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="USER")
 public class User {
 	
 	@Id
+	@GenericGenerator(name="gen",strategy="increment")
+	@GeneratedValue(generator="gen")
     @Column(name = "ID")
 	private Long id;
 	

@@ -41,8 +41,8 @@ public class Prueba implements Serializable {
 	
 	public void welcome(){
 		User yo = new User();
-		yo.setNombre("Pedro");
-		yo.setId(5l);
+		yo.setNombre(name);
+		//yo.setId(5l);
 		emf = Persistence.createEntityManagerFactory("UnidadPersonas");
 		em = emf.createEntityManager();
 		 try {

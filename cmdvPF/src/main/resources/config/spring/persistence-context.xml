@@ -32,12 +32,13 @@
         <context:include-filter type="annotation"
             expression="org.springframework.stereotype.Repository" />
     </context:component-scan>
- 
-    <bean class="org.springframework.orm.jpa.JpaTransactionManager"
+
+  	<bean class="org.springframework.orm.jpa.JpaTransactionManager"
         id="transactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
     </bean>
  
+ 	<!-- Define que las transacciones estarán anotadas -->
     <tx:annotation-driven mode="aspectj"
         transaction-manager="transactionManager" />
  

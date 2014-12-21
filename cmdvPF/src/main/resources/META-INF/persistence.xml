@@ -14,7 +14,6 @@ http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
     </persistence-unit>
     
     <persistence-unit name="UnidadPersonas">
-		 <class>es.curso.bo.Persona</class>
 		 <properties>
 			 <property name= "hibernate.show_sql" value="true" />
 			 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
