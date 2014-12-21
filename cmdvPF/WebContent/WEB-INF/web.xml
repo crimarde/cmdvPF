@@ -25,11 +25,12 @@
 		<param-value>cupertino</param-value>
 	</context-param>
 	<!-- For Prettyfaces, so that it doesn't scan all packages -->
+	<!--  
 	<context-param>
 		<param-name>com.ocpsoft.pretty.BASE_PACKAGES</param-name>
-		<!-- Poner el paquete donde estarán los Controladores -->
-		<param-value>cat.gencat.ics.intg.tool.managedbeans</param-value>
+		<param-value>cmdv.managedBeans</param-value>
 	</context-param>
+ 	-->
  	
   	<!-- Change to "Production" when you are ready to deploy -->
 	<context-param>
@@ -53,15 +54,16 @@
 		<filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class>    -->
 		<!-- async-supported>true</async-supported  CERRAR EL COMENTARIO 
 	</filter>
-	-->
+	
 	<filter-mapping>
 		<filter-name>Pretty Filter</filter-name>
 		<url-pattern>/*</url-pattern>
 		<dispatcher>FORWARD</dispatcher>
 		<dispatcher>REQUEST</dispatcher>
-		<dispatcher>ERROR</dispatcher>
-		<!-- dispatcher>ASYNC</dispatcher -->
+		<dispatcher>ERROR</dispatcher>   -->
+		<!-- dispatcher>ASYNC</dispatcher CERRAR COMENTARIO
 	</filter-mapping>
+	-->
 	
 	<!-- Add Support for Spring -->
 	<listener>

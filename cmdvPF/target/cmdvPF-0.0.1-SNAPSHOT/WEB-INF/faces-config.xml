@@ -4,16 +4,15 @@
 	version="2.0"
     xmlns="http://java.sun.com/xml/ns/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-    					http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
     
      
     <!-- Integracion JSF y Spring -->
     <application>
     	<!-- Bean que hace que sea spring el que haga las inyecciones -->
-       	<el-resolver>
-       		org.springframework.web.jsf.el.SpringBeanFacesELResolver
-  		</el-resolver>
+        <el-resolver>
+            org.springframework.web.jsf.el.SpringBeanFacesELResolver
+        </el-resolver>
         
         <!-- Internacionalización -->
 		<locale-config>
@@ -29,7 +28,7 @@
    	</application>
     
     
-    <!-- configuration of navigation rules   
+    <!-- configuration of navigation rules -->   
     <navigation-rule>
         <from-view-id>/pages/index.xhtml</from-view-id>
         <navigation-case>
@@ -41,5 +40,5 @@
             <to-view-id>/pages/error.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
-     --> 
+     
 </faces-config>

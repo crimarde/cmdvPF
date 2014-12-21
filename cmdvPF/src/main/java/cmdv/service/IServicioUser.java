@@ -1,8 +1,8 @@
-package service;
+package cmdv.service;
 
 import cmdv.domain.User;
 
-public interface ServicioUser {
+public interface IServicioUser {
 
 	public User findById(Long id);
 	

@@ -9,19 +9,13 @@
 		</property>
 	</bean>
 
-jdbc.name=jndiName
-jdbc.driverClassName=
-jdbc.url=
-jdbc.username=root
-jdbc.password=
-
     <Resource name="jndiName" 
 			auth="Container"
             type="javax.sql.DataSource" 
-            driverClassName="com.mysql.jdbc.Driver"
-            url="jdbc:mysql://localhost/cmdvPF"
-            username="root"
-            password="" 
+            driverClassName="${jdbc.driverClassName}"
+            url="${jdbc.url}"
+            username="${jdbc.username}"
+            password="${jdbc.password}" 
             maxActive="20" 
             maxIdle="10"
             maxWait="10000"

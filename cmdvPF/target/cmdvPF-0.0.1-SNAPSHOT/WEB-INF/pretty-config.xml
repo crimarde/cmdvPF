@@ -1,0 +1,58 @@
+<pretty-config xmlns="http://ocpsoft.org/prettyfaces/3.3.3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://ocpsoft.org/prettyfaces/3.3.3
+               ocpsoft-pretty-faces-3.3.3.xsd">
+
+	<url-mapping id="login">
+        <pattern value="/login" />
+        <view-id value="/pages/login.jsf" />
+    </url-mapping>
+    
+    <url-mapping id="logout">
+		<pattern value="/logout" />
+		<view-id value="/pages/login.jsf" />
+		<action>#{userManagedBean.logout}</action>
+	</url-mapping>
+	
+	<url-mapping id="soap">
+		<pattern value="/soap" />
+		<view-id value="prueba.xhtml" />
+	</url-mapping>
+	
+	<url-mapping id="dummy1">
+        <pattern value="/dummy1" />
+        <view-id value="/pages/dummy1.jsf" />
+	</url-mapping>
+
+    <url-mapping id="home">
+		<pattern value="/home" />
+		<view-id value="/pages/home.jsf" />
+	</url-mapping>
+    
+    <url-mapping id="admin">
+		<pattern value="/admin" />
+		<view-id value="/pages/admin/admin.jsf" />
+	</url-mapping>
+    
+	<url-mapping id="accessdenied">
+		<pattern value="/accessdenied"></pattern>
+		<view-id value="/pages/accessdenied.jsf"></view-id>
+	</url-mapping>
+	
+    <url-mapping id="awaiting-confirmation">
+		<pattern value="/awaiting-confirmation" />
+		<view-id value="/pages/awaiting-confirmation.jsf" />
+	</url-mapping>
+	<url-mapping id="error">
+		<pattern value="/error" />
+		<view-id value="/pages/error404.jsf" />
+	</url-mapping>
+	
+	<!-- Mapeo para redirigir cualquier pagina que termine en ui a la pagina de login -->
+	<url-mapping id="ui">
+		<!-- Ruta que muestra el navegador (y por la que llamo a la página) -->
+        <pattern value="/ui" />
+        <!-- Ruta real a la que se redirige el navegador -->
+        <view-id value="/pages/home.jsf" />
+	</url-mapping>
+</pretty-config>
