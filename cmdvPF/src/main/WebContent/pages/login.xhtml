@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Login</title>
+	<h:outputStylesheet library="css" name="login.css" />
+	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/tamanoGlobal.css" />
+</h:head>
+
+<h:body>
+
+	<h:form prependId="false">
+	
+		<p:growl id="growl" showDetail="true" globalOnly="true" autoUpdate="true" />
+
+	 	<p:panel header="Formulari0 de acceso">  
+			<h:panelGrid id="panel" columns="2" border="0">
+			<f:event listener="#{loginController.reset}" type="postValidate" />
+			
+				<h:outputLabel for="userName" value="#{msg['login.user']}" />
+				<h:panelGroup>
+					<h:inputText id="userName" value="#{loginController.user}"
+						required="true" requiredMessage="#{msg['login.userRequired']}">
+					</h:inputText>
+					<h:message for="userName" style="color: red;" />
+				</h:panelGroup>
+	
+				<h:outputLabel for="password" value="Pass *:" />
+				<h:panelGroup>
+					<h:inputSecret id="password" value="#{loginController.pass}"
+						required="true" requiredMessage="#{msg['login.passRequired']}" />
+					<h:message for="password" style="color: red;" />
+				</h:panelGroup>
+				
+				<!-- <h:outputLabel value="Base de dades:" for="entorn"/>
+				<h:panelGroup>
+					<h:selectOneMenu id="entorn" value="#{userManagedBean.entorn}" >
+						<f:selectItem id="pro" itemLabel="Producció" itemValue="pro" />
+						<f:selectItem id="pre" itemLabel="Preproducció" itemValue="pre" />
+					</h:selectOneMenu>  
+				</h:panelGroup>-->
+				<br />
+				<h:panelGroup
+					rendered="#{userManagedBean.loginError}">
+					<h:outputText value="#{msg['login.error']}" style="color:red"></h:outputText>
+				</h:panelGroup>
+				
+			</h:panelGrid>
+				<h:commandButton value="Login" action="#{loginController.pruebaExito}" >
+				</h:commandButton>
+	 	</p:panel>  
+	</h:form>
+</h:body>
+</html>

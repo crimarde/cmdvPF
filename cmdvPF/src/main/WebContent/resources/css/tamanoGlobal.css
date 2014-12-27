@@ -1,0 +1,12 @@
+.ui-widget, .ui-widget .ui-widget {
+    font-size: 90%;
+}
+
+.boton-atras {
+	bottom: 20px;
+  	position: relative;
+   	right: 48%;
+   	padding: 10px 15px;
+   	background: #99CCFF;
+   	color: #FFF;
+}

@@ -24,13 +24,12 @@
 		<param-name>primefaces.THEME</param-name>
 		<param-value>cupertino</param-value>
 	</context-param>
-	<!-- For Prettyfaces, so that it doesn't scan all packages -->
-	<!--  
+
+	<!-- For Prettyfaces, so that it doesn't scan all packages -->  
 	<context-param>
 		<param-name>com.ocpsoft.pretty.BASE_PACKAGES</param-name>
 		<param-value>cmdv.managedBeans</param-value>
 	</context-param>
- 	-->
  	
   	<!-- Change to "Production" when you are ready to deploy -->
 	<context-param>

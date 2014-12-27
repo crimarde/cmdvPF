@@ -1,0 +1,10 @@
+body {
+	width: 550px;
+	margin: auto;
+	margin-top: 150px;
+	padding: 15px;
+}
+
+.error{
+	color: red;
+}
