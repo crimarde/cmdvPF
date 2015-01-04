@@ -1,10 +1,13 @@
 package cmdv.serviceImpl;
 
 import javax.inject.Inject;
-import javax.transaction.Transactional;
+//import javax.transaction.Transactional;
+
+
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import cmdv.dao.UserDAO;
 import cmdv.domain.User;
@@ -23,5 +26,13 @@ public class ServicioUser implements IServicioUser{
 		return userDAO.findById(id);
 	}
 
+	@Override
+	public User findByUserPass(String user, String pass) {
+		return userDAO.findByUserPass(user, pass);
+	}
 
+	@Override
+	public void saveUser(User user) {
+		userDAO.addUser(user);
+	}
 }

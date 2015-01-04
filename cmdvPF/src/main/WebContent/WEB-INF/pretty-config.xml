@@ -43,6 +43,7 @@
 		<pattern value="/awaiting-confirmation" />
 		<view-id value="/pages/awaiting-confirmation.jsf" />
 	</url-mapping>
+	
 	<url-mapping id="error">
 		<pattern value="/error" />
 		<view-id value="/pages/error404.jsf" />

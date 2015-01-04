@@ -27,7 +27,7 @@ public class Prueba implements Serializable {
 	@Inject
 	@Qualifier("servicioUser")
 	private IServicioUser servicioUser;
-						  
+	
 	@PostConstruct
 	public void init() {
 //		em = emf.createEntityManager();
@@ -75,11 +75,4 @@ public class Prueba implements Serializable {
 		
 	}
 
-	public IServicioUser getServicioUser() {
-		return servicioUser;
-	}
-
-	public void setServicioUser(IServicioUser servicioUser) {
-		this.servicioUser = servicioUser;
-	}
 }

@@ -29,27 +29,23 @@
 	
 	<!-- Declarando un EntityManager (Se encarga de crear y persistir los objetos, equivalente SessionFactory de hibernate) -->
     <bean
-        class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
-        id="entityManagerFactory">
-        <property name="persistenceUnitName" value="UnidadPersonas" />
+        class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory">
+        <property name="persistenceUnitName" value="unidadPersistencia" />
         <property name="dataSource" ref="dataSource" />
         <property name="packagesToScan" value="cmdv.*" />
     </bean>
  
     <context:component-scan base-package="cmdv.*">
-        <context:include-filter type="annotation"
-            expression="org.springframework.stereotype.Repository" />
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
     </context:component-scan>
 
 	<!-- Declarando un TransactionManager (se encarga de las transacciones contra la base de datos) -->
-  	<bean class="org.springframework.orm.jpa.JpaTransactionManager"
-        id="transactionManager">
+  	<bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
     </bean>
 
 	<!-- Define que las transacciones estarán anotadas -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
- 
  
     <context:spring-configured />
     <context:annotation-config />

@@ -3,8 +3,11 @@ package cmdv.daoImpl;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+//import org.hibernate.Session;
+//import org.hibernate.Transaction;
+
+
+import org.springframework.transaction.annotation.Transactional;
 
 import cmdv.dao.BaseDAO;
 
@@ -52,33 +55,45 @@ public abstract class AbstractBaseGenericDAOImpl<T, K> implements BaseDAO<T, K> 
 	 * 		CRUD BASICO IMPLEMENTADO	
 	 =====================================*/
 
+	//@Transactional
 	@Override
 	public T create(T entity) {
-		Session session = (Session) em.getDelegate();
-		Transaction tx = session.beginTransaction();
-		session.saveOrUpdate(entity);
-		session.flush();
-		tx.commit();
+		//TODO al anotar un metodo como transaccional spring de encarga de la transaccion por lo que no hay que 
+		//abrir la transaccion ni hacer commit, se encarga spring. Es más si lo intentas da un error, no se 
+		//pueden crear transacciones en una transaccion conpartida
+		//Not allowed to create transaction on shared EntityManager - use Spring transactions
+		//em.getTransaction().begin();
+		
+		System.out.println(em.contains(entity));
+		em.persist(entity);
+		System.out.println(em.contains(entity));
+		//em.getTransaction().commit();
+		
+		//Session session = (Session) em.getDelegate();
+		//Transaction tx = session.beginTransaction();
+		//session.saveOrUpdate(entity);
+		//session.flush();
+		//tx.commit();
 		return entity;
 	}
 
 	@Override
 	public T update(T entity) {
-		Session session = (Session) em.getDelegate();
-		Transaction tx = session.beginTransaction();
-		session.update(entity);
-		session.flush();
-		tx.commit();
+//		Session session = (Session) em.getDelegate();
+//		Transaction tx = session.beginTransaction();
+//		session.update(entity);
+//		session.flush();
+//		tx.commit();
 		return entity;
 	}
 
 	@Override
 	public void delete(T entity) {
-		Session session = (Session) em.getDelegate();
-		Transaction tx = session.beginTransaction();
-		session.delete(entity);
-		session.flush();
-		tx.commit();
+//		Session session = (Session) em.getDelegate();
+//		Transaction tx = session.beginTransaction();
+//		session.delete(entity);
+//		session.flush();
+//		tx.commit();
 	}
 	
 }
